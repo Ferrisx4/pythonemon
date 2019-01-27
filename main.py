@@ -1,16 +1,13 @@
-import classes
-import combat
-from myGraphics import *
+from pkmn_classes import *
+from combat import *
 
 def mainLoop():
-    pikachu = classes.combatant('Pikachu', 50)
+    pikachu = pokemon('Pikachu', 50)
     pikachu.printParty()
     
-    foe = classes.combatant('Goldeen', 30)
+    foe = pokemon('Goldeen', 30)
     foe.printParty()
     
-    #drawSquares()
-    drawLineCurve()
+    print calculate_effectiveness('Fire','Grass','Water')
         
-    
 mainLoop()
