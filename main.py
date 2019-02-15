@@ -8,6 +8,13 @@ def mainLoop():
     foe = pokemon('Goldeen', 30)
     foe.printParty()
     
-    print calculate_effectiveness('Fire','Grass','Water')
+    print 'Electric vs Goldeen: '
+    print calculate_effectiveness('Electric','Water',None)
+    print 'Electric vs Diglett: '
+    print calculate_effectiveness('Electric','Ground','Rock')
+    print 'Electric vs Gyarados: '
+    print calculate_effectiveness('Electric','Water','Flying')
+    print 'Electric vs Bellsprout: '
+    print calculate_effectiveness('Electric','Grass',None)
         
 mainLoop()
