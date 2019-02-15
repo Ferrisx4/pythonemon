@@ -1,4 +1,4 @@
-w, h = 5, 5;
+w, h = 5, 5
 # Declare an array to hold move type effectiveness values
 # Example Ef['Fire']['Water] = 0.5 (Fire is attacking, Water is defending)
 #Ef = [[0 for x in range(w)] for y in range(h)] 
@@ -109,6 +109,14 @@ Ef1 = {
         'Poison':2.0,
         'Psychic':0.5
     },
+    'Ice' : {
+        'Flying':2.0,
+        'Ground':2.0,
+        'Water':0.5,
+        'Grass':2.0,
+        'Ice':0.5,
+        'Dragon':2.0
+    },
     'Dragon' : {
         'Dragon':2.0
     }
@@ -121,7 +129,7 @@ def calculate_damage():
     return 0
 
 def calculate_effectiveness(move_type, defender_type1, defender_type2):
-    effectiveness = 1;
+    effectiveness = 1
     # Defender Type 1
     try:
         effectiveness = effectiveness * Ef1[move_type][defender_type1]
