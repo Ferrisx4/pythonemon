@@ -1,0 +1,6 @@
+This is a pseudocode representation of how a battle
+should play out
+
+
+if pokemon1.move.priority > pokemon2.move.priority
+    perform pokemon1.move
