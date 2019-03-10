@@ -125,7 +125,10 @@ Ef1 = {
 def combat():
     return 0
     
-def calculate_damage():
+def calculate_damage(level, power, attack, defense, movetype):
+    # Damage formula:
+    # damage =   (((((2 * level) / 5) + 2) * (power * (attack/defense)) / 50) + 2 ) * modifier
+    # modifier = rand(0.85,1) * STAB * type_effectiveness()
     return 0
 
 def calculate_effectiveness(move_type, defender_type1, defender_type2):
