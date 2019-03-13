@@ -16,15 +16,16 @@ class pokemon:
         return 50
         
 class move:
-    def __init__(self,name,move_type,move_class,power,pp,priority,critical_hit_ratio):
+    def __init__(self,name,move_type,move_class,power,accuracy,pp,priority,critical_hit_ratio):
         self.name = name
         self.move_type = move_type
         self.move_class = move_class
         self.power = power
+        self.accuracy = accuracy
         self.pp = pp
         self.priority = priority
-        self.critical_hit_ration = critical_hit_ratio
+        self.critical_hit_ratio = critical_hit_ratio
     
     # handle special case moves ()
-    def special_cases(name,conditions):
+    def special_cases(self,name,conditions):
         return 0
