@@ -1,3 +1,9 @@
+import csv
+from pkmn_classes import move
+
+'''
+        Type effectiveness
+'''
 # Declare an array to hold move type effectiveness values
 # Example Ef['Fire']['Water] = 0.5 (Fire is attacking, Water is defending)
 #Ef = [[0 for x in range(w)] for y in range(h)] 
@@ -120,3 +126,16 @@ Ef1 = {
         'Dragon':2.0
     }
 }
+
+# Get the move data from a file.
+
+with open('data/moves.csv') as csv_file:
+    csv_reader = csv.DictReader(csv_file, delimiter=',')
+    imported_moves = 0
+    moves = []
+    for row in csv_reader:
+        # Create new move instance from data in CSV
+        #Moves stored as such: name,type,class,power,accuracy,pp,priority,crit
+        moves.append(move(row["name"],row["type"],row["class"],row["power"],row["accuracy"],row["pp"],row["priority"],row["crit"]))
+        imported_moves += 1
+    print 'Imported ' + str(imported_moves) + ' moves.'
