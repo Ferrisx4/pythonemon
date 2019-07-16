@@ -21,7 +21,8 @@ def test_type_effectiveness():
 
 def test_move_import():
     from ROM import moves
-    print'Imported ' + str(len(moves)) + ' moves.'
+    print 'Imported ' + str(len(moves)) + ' moves.'
+    print moves[0].name + ' has ' + moves[0].accuracy + '% accuracy.'
 
 def mainLoop():
     test_pokemon_creation()
