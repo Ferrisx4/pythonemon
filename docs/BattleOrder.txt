@@ -4,3 +4,7 @@ should play out
 
 if pokemon1.move.priority > pokemon2.move.priority
     perform pokemon1.move
+else if pokemon2.move.priority > pokemon1.move.priority
+    perform pokemon2.move
+else
+    pokemon_to_move_first = max(pokemon1.speed, pokemon2.speed)
