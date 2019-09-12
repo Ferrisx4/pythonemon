@@ -33,6 +33,6 @@ def mainLoop():
     
     print '===================='
 
-    test_move_import()    
+    test_move_import()
         
 mainLoop()
