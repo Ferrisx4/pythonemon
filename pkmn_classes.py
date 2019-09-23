@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 class pokemon:
     def __init__(self,species,level):
         #partyLoadout = ['1', '4', '9'] #List of IDs to stored Pythonemons
@@ -5,11 +6,32 @@ class pokemon:
         self.level = level
         self.status = "0"
         self.hp = pokemon.getBaseHP(species, level)
-        self.moves = (5,0,0,0)
+        self.moves = (None,None,None,None)
     
     def printParty(self):
         print self.level, self.species
+
+    def printMoves(self):
+        from ROM import moves
+        print self.species + '\'s moves:'
+        for move in self.moves:
+            try:
+                print moves[move].name
+            except:
+                print '-'
     
+    """
+    Set this Pokémon's moves
+    Parameters: array with 1 to 4 elements indicating move IDs
+    """
+    def getMoves(self):
+        #this is where the moves would be gotten from
+        print 'hi'
+
+    def setMoves(self):
+        #this is where the moves would be set
+        print 'hi'
+
     # Looks up the value of the HP for the Pythonemon by species and level
     @staticmethod
     def getBaseHP(species, level):
