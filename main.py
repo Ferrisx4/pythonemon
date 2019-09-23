@@ -5,6 +5,7 @@ from combat import *
 def test_pokemon_creation():
     pikachu = pokemon('Pikachu', 50)
     pikachu.printParty()
+    pikachu.printMoves()
     
     foe = pokemon('Goldeen', 30)
     foe.printParty()
