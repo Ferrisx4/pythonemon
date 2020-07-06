@@ -9,16 +9,16 @@ class pokemon:
         self.moves = (None,None,None,None)
     
     def printParty(self):
-        print self.level, self.species
+        print(self.level, self.species)
 
     def printMoves(self):
         from ROM import moves
-        print self.species + '\'s moves:'
+        print(self.species + '\'s moves:')
         for move in self.moves:
             try:
-                print moves[move].name
+                print(moves[move].name)
             except:
-                print '-'
+                print('-')
     
     """
     Set this Pokémon's moves
@@ -26,11 +26,11 @@ class pokemon:
     """
     def getMoves(self):
         #this is where the moves would be gotten from
-        print 'hi'
+        print('hi')
 
     def setMoves(self):
         #this is where the moves would be set
-        print 'hi'
+        print('hi')
 
     # Looks up the value of the HP for the Pythonemon by species and level
     @staticmethod

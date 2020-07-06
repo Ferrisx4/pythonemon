@@ -138,4 +138,4 @@ with open('data/moves.csv') as csv_file:
         #Moves stored as such: name,type,class,power,accuracy,pp,priority,crit
         moves.append(move(row["name"],row["type"],row["class"],row["power"],row["accuracy"],row["pp"],row["priority"],row["crit"]))
         imported_moves += 1
-    print 'Imported ' + str(imported_moves) + ' moves.'
+    print('Imported ' + str(imported_moves) + ' moves.')
