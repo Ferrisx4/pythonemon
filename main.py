@@ -29,10 +29,10 @@ def mainLoop():
 
     print('====================')
 
-    #test_type_effectiveness()
+    test_type_effectiveness()
     
     print('====================')
 
-    #test_move_import()
+    test_move_import()
 
 mainLoop()
