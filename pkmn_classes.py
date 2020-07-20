@@ -21,16 +21,16 @@ class pokemon:
                 print('-')
     
     """
-    Set this Pokémon's moves
+    Get and set this Pokémon's moves
     Parameters: array with 1 to 4 elements indicating move IDs
     """
     def getMoves(self):
         #this is where the moves would be gotten from
-        print('hi')
+        return self.moves
 
-    def setMoves(self):
+    def setMoves(self, moveset):
         #this is where the moves would be set
-        print('hi')
+        self.moves = moveset
 
     # Looks up the value of the HP for the Pythonemon by species and level
     @staticmethod
