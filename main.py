@@ -1,24 +1,23 @@
 from pkmn_classes import *
-from combat import *
-
+from combat import combat
 
 def test_pokemon_creation():
     pikachu = pokemon('Pikachu', 50)
     pikachu.printParty()
+    pikachu.setMoves( [0] )
     pikachu.printMoves()
-    
     foe = pokemon('Goldeen', 30)
     foe.printParty()
 
 def test_type_effectiveness():
     print('Electric vs Goldeen: ')
-    print(calculate_effectiveness('Electric','Water',None))
+    print(combat.calculate_effectiveness('Electric','Water',None))
     print('Electric vs Diglett: ')
-    print(calculate_effectiveness('Electric','Ground','Rock'))
+    print(combat.calculate_effectiveness('Electric','Ground','Rock'))
     print('Electric vs Gyarados: ')
-    print(calculate_effectiveness('Electric','Water','Flying'))
+    print(combat.calculate_effectiveness('Electric','Water','Flying'))
     print('Electric vs Bellsprout: ')
-    print(calculate_effectiveness('Electric','Grass',None))
+    print(combat.calculate_effectiveness('Electric','Grass',None))
 
 def test_move_import():
     from ROM import moves
@@ -30,10 +29,10 @@ def mainLoop():
 
     print('====================')
 
-    test_type_effectiveness()
+    #test_type_effectiveness()
     
     print('====================')
 
-    test_move_import()
-        
+    #test_move_import()
+
 mainLoop()
