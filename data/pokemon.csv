@@ -1,2 +1,3 @@
 species,type1,type2,base_hp,base_attack,base_defense,base_sa,base_sd,base_speed,experience_curve,dex_info,dex_no
 Bulbasaur,Grass,NULL,30,30,30,30,30,30,normal,It's a weird plant turtle thing,1
+Ivysaur,Grass,NULL,40,40,40,40,40,40,normal,It's the bigger brother of the weird plant turtl ething,2
