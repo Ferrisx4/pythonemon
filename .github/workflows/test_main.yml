@@ -16,4 +16,5 @@ jobs:
             python-version: ${{ matrix.python }}
         - name: Test the main function
           run: |
-            python ./test_main.py
+            cd "$workdir"
+            python test_main.py
