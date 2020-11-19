@@ -1,11 +1,12 @@
 # -*- coding: latin-1 -*-
-class pokemon:
+# Keep track of an individual Pokémon, like what would be in the player's party or PC
+class pokemon_instance:
     def __init__(self,species,level):
         #partyLoadout = ['1', '4', '9'] #List of IDs to stored Pythonemons
         self.species = species
         self.level = level
         self.status = "0"
-        self.hp = pokemon.getBaseHP(species, level)
+        #self.hp = pokemon.getBaseHP(species, level)
         self.moves = (None,None,None,None)
     
     def printParty(self):
@@ -36,7 +37,28 @@ class pokemon:
     @staticmethod
     def getBaseHP(species, level):
         return 50
-        
+
+# Define a class that keeps track of all Generic data for a Pokémon species, i.e. Bulbasaur
+class pokemon_data:
+    def __init__(self,species,type1,type2,baseHP,baseAttack,baseDefense,baseSpecialAttack,baseSpecialDefense,baseSpeed,ability,experience_group,learnset):
+        self.species = species
+        self.type1 = type1
+        self.type2 = type2
+        self.baseHP = baseHP
+        self.baseAttack = baseAttack
+        self.baseDefense = baseDefense
+        self.baseSpecialAttack = baseSpecialAttack
+        self.baseSpecialDefense = baseSpecialDefense
+        self.baseSpeed = baseSpeed
+        self.ability = ability
+        self.experience_group = experience_group
+        self.learnset = learnset
+
+    # Define some getters and setters
+    def get_baseStatTotal(self):
+        return self.baseHP + self.baseAttack + self.baseDefense + self.baseSpecialAttack + self.baseSpecialDefense + self.baseSpeed
+
+
 class move:
     def __init__(self,name,move_type,move_class,power,accuracy,pp,priority,critical_hit_ratio):
         self.name = name
