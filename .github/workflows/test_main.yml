@@ -12,10 +12,8 @@ jobs:
         steps:
         - uses: actions/checkout@v2
         - name: Set up Python ${{ matrix.python-version }}
-          uses: actions/setup-python@v2
           with:
             python-version: ${{ matrix.python }}
-        - name: Test the main function
+        - name: Test the main test function
           run: |
-            pip install pytest
-            pytest test_main.py
+            python test_main.py
