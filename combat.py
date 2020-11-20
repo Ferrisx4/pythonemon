@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 class combat:
     def __init__(self,party1,party2):
         self.p1 = party1

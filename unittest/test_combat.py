@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 import unittest
 from ..combat import calculate_effectiveness
 

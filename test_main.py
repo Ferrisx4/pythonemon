@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 from pkmn_classes import *
 from combat import combat
 

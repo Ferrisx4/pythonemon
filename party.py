@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 class party:
     def __init__(self,p1,p2,p3,p4,p5,p6):
         self.p1 = p1

@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 import csv
 from pkmn_classes import *
 
