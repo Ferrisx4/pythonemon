@@ -1,6 +1,6 @@
 # -*- coding: latin-1 -*-
 import csv
-from pkmn_classes import *
+from pkmn_classes import move, pokemon_data
 
 '''
         Type effectiveness
@@ -151,10 +151,10 @@ with open('data/moves.csv') as csv_file:
 with open('data/pokemon.csv') as csv_file:
     csv_reader = csv.DictReader(csv_file, delimiter=',')
     imported_pokemon = 0
-    pokemon_list = []
+    pokemon_dict = {}
     for row in csv_reader:
         # Create new Pokémon instance from data in CSV
         # Pokémon stored as such: species,type1,type2,base_hp,base_attack,base_defense,base_sa,base_sd,base_speed,experience_curve,dex_info,dex_no
-        pokemon_list.append(pokemon_data(row["species"],row["type1"],row["type2"],row["base_hp"],row["base_attack"],row["base_defense"],row["base_sa"],row["base_sd"],row["base_speed"],row["experience_curve"],row["dex_info"],row["dex_no"],))
+        pokemon_dict[row["species"]] = pokemon_data(row["species"],row["type1"],row["type2"],row["base_hp"],row["base_attack"],row["base_defense"],row["base_sa"],row["base_sd"],row["base_speed"],row["experience_group"],row["dex_info"],row["dex_no"])
         imported_pokemon += 1
     print('Imported ' + str(imported_pokemon) + ' Pokémon.')

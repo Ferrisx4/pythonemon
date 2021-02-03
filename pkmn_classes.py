@@ -2,15 +2,18 @@
 # Keep track of an individual Pokémon, like what would be in the player's party or PC
 class pokemon_instance:
     def __init__(self,species,level):
-        #partyLoadout = ['1', '4', '9'] #List of IDs to stored Pythonemons
         self.species = species
         self.level = level
         self.status = "0"
         #self.hp = pokemon.getBaseHP(species, level)
         self.moves = (None,None,None,None)
     
+    # TODO does this make sense to have here?
     def printParty(self):
         print(self.level, self.species)
+
+    def __str__(self):
+        return('Pokemon: ' + self.species + ' \tLevel: ' + str(self.level))
 
     def printMoves(self):
         from ROM import moves
@@ -40,7 +43,7 @@ class pokemon_instance:
 
 # Define a class that keeps track of all Generic data for a Pokémon species, i.e. Bulbasaur
 class pokemon_data:
-    def __init__(self,species,type1,type2,baseHP,baseAttack,baseDefense,baseSpecialAttack,baseSpecialDefense,baseSpeed,ability,experience_group,learnset):
+    def __init__(self,species,type1,type2,baseHP,baseAttack,baseDefense,baseSpecialAttack,baseSpecialDefense,baseSpeed,experience_group,dex_info,dex_no):
         self.species = species
         self.type1 = type1
         self.type2 = type2
@@ -50,15 +53,30 @@ class pokemon_data:
         self.baseSpecialAttack = baseSpecialAttack
         self.baseSpecialDefense = baseSpecialDefense
         self.baseSpeed = baseSpeed
-        self.ability = ability
         self.experience_group = experience_group
-        self.learnset = learnset
+        self.dex_info = dex_info
+        self.dex_no = dex_no
+
+    # Define how to print this class for users. Probably useless
+    def __str__(self):
+        return 'I am a ' + self.species
+
+    # Define how to print this class for debugging. Probably not useless. We'll see...
+    def __repr__(self):
+        return self.species + ' are in the ' + self.experience_group + ' experience group.'
 
     # Define some getters and setters
     def get_baseStatTotal(self):
         return self.baseHP + self.baseAttack + self.baseDefense + self.baseSpecialAttack + self.baseSpecialDefense + self.baseSpeed
 
+    def get_types(self):
+        return [self.type1, self.type2]
 
+    # Checks the legality of a move
+    def check_move_legality(self, move, level):
+        return True
+
+# Define a class that keeps track of info for a move
 class move:
     def __init__(self,name,move_type,move_class,power,accuracy,pp,priority,critical_hit_ratio):
         self.name = name

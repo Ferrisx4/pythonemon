@@ -1,5 +1,5 @@
 # Pythonémon
-[![Build Status](https://travis-ci.com/Ferrisx4/pythonemon.svg?branch=master)](https://travis-ci.com/Ferrisx4/pythonemon)
+![Pythonemon](https://github.com/Ferrisx4/pythonemon/workflows/Pythonemon/badge.svg)
 
 ## About
 
