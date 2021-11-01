@@ -1,7 +1,7 @@
 # -*- coding: latin-1 -*-
 # Keep track of an individual Pokémon, like what would be in the player's party or PC
 class pokemon_instance:
-    def __init__(self,species,level):
+    def __init__(self,species,level,status,moves):
         self.species = species
         self.level = level
         self.status = "0"
