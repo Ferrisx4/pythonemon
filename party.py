@@ -1,4 +1,8 @@
 # -*- coding: latin-1 -*-
+import csv
+from pkmn_classes import pokemon_instance
+
+# Does party have to be a class at all? For convenience, sure
 
 # Define a 'party' class, which consists of 6 pokemon_instance objects
 class party:
@@ -19,13 +23,24 @@ class party:
         print('6: ' + str(self.p6))
 
 
-def getParty(member_no):
-    print("hello")
+def loadParty():
     # Open the party db/file
-    
-    # Load the party member
-    # currentHP = db.getCurrentHP(member_no)
-    # currentHPMax = db.getCurrentHPMax(member_no)
+    with open('data/party.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=',')
+        imported_party_members = 0
+        temp_party = []
+        # Load each party member
+        for row in csv_reader:
+            temp_party.append(pokemon_instance(row["species"],row["level"],row["status"],[row["move1"],row["move2"],row["move3"],row["move4"]]))
+            imported_party_members += 1
+
+        for x in range(imported_party_members+1, 7):
+            temp_party.append(pokemon_instance(None,None,None,[None,None,None,None]))
+        print('Imported ' + str(imported_party_members) + ' into the party.')
+    # Add them to an official party class
+        return party(temp_party[0],temp_party[1],temp_party[2],temp_party[3],temp_party[4],temp_party[5])
+
+
     # ...
     # party_member = classes.combatant('name','stats 1', 'stats 2'...)
     # return party_member
