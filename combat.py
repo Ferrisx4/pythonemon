@@ -28,10 +28,18 @@ class combat:
         
         return effectiveness
 
-        @staticmethod
-        def calculate_damage(level, power, attack, defense, movetype):
-            # Damage formula: (basically Generation 1 but using type split from generation 4+)
-            # damage =   (((((2 * level) / 5) + 2) * (power * (attack/defense)) / 50) + 2 ) * modifier
-            # modifier = rand(0.85,1) * STAB * type_effectiveness()
-            return 0
+    @staticmethod
+    def calculate_damage(level, power, attack, defense, movetype):
+        # Damage formula: (basically Generation 1 but using type split from generation 4+)
+        # damage =   (((((2 * level) / 5) + 2) * (power * (attack/defense)) / 50) + 2 ) * modifier
+        # modifier = rand(0.85,1) * STAB * type_effectiveness()
+        return 0
 
+    # 
+    # Takes into consideration whether the move still has PP, is not disabled, and is not blocked
+    #  by other conditions of the 'scene'.
+
+    @staticmethod
+    def do_move(move, scene):
+        """Attempts to perform a move. This is after the game has confirmed the move can be performed."""
+        return 0
