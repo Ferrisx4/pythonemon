@@ -1,19 +1,20 @@
 # -*- coding: latin-1 -*-
 # Keep track of an individual Pokémon, like what would be in the player's party or PC
 class pokemon_instance:
-    def __init__(self,species,level,status,moves):
+    def __init__(self,species,level,status=None,moves=None):
         self.species = species
         self.level = level
-        self.status = "0"
+        self.status = status or 0;
         #self.hp = pokemon.getBaseHP(species, level)
-        self.moves = (None,None,None,None)
+        self.moves = moves or (None,None,None,None)
     
     # TODO does this make sense to have here?
     def printParty(self):
         print(self.level, self.species)
 
     def __str__(self):
-        return('Pokemon: ' + self.species + ' \tLevel: ' + str(self.level))
+        #return('Pokemon: ' + self.species + ' \tLevel: ' + str(self.level))
+        return('Pokemon: ' + str(self.species) + ' \tLevel: ' + str(self.level))
 
     def printMoves(self):
         from ROM import moves
