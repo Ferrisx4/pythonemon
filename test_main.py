@@ -1,7 +1,7 @@
 # -*- coding: latin-1 -*-
 from pkmn_classes import pokemon_instance
 from combat import combat
-from party import party
+from party import *
 
 # This is a series of functions to test the actual functions of the program
 
@@ -34,21 +34,29 @@ def test_type_effectiveness():
     print(combat.calculate_effectiveness('Electric','Water','Flying'))
     print('Electric vs Bellsprout: ')
     print(combat.calculate_effectiveness('Electric','Grass',None))
-
+    #combat.do_move(3,scene)
 def test_move_import():
     from ROM import moves
     print('Imported ' + str(len(moves)) + ' moves.')
     print(moves[0].name + ' has ' + moves[0].accuracy + '% accuracy.')
+
+def test_party_import():
+    my_party = loadParty()
+    my_party.print_party()
 
 def mainLoop():
     test_pokemon_creation()
 
     print('====================')
 
-    # test_type_effectiveness()
+    test_type_effectiveness()
     
     print('====================')
 
-    # test_move_import()
+    test_move_import()
+
+    print('====================')
+
+    test_party_import()
 
 mainLoop()
