@@ -1,12 +1,14 @@
 # -*- coding: latin-1 -*-
 # Keep track of an individual Pokémon, like what would be in the player's party or PC
 class pokemon_instance:
-    def __init__(self,species,level,status=None,moves=None):
+    def __init__(self,species,nickname,level,status=None,moves=None):
         self.species = species
+        self.nickname = nickname
         self.level = level
         self.status = status or 0;
         #self.hp = pokemon.getBaseHP(species, level)
         self.moves = moves or (None,None,None,None)
+        
     
     # TODO does this make sense to have here?
     def printParty(self):
@@ -14,7 +16,7 @@ class pokemon_instance:
 
     def __str__(self):
         #return('Pokemon: ' + self.species + ' \tLevel: ' + str(self.level))
-        return('Pokemon: ' + str(self.species) + ' \tLevel: ' + str(self.level))
+        return('Pokemon: ' + str(self.species) + ' \tNickname: ' + str(self.nickname) + ' \tLevel: ' + str(self.level))
 
     def printMoves(self):
         from ROM import moves
@@ -44,7 +46,8 @@ class pokemon_instance:
 
 # Define a class that keeps track of all Generic data for a Pokémon species, i.e. Bulbasaur
 class pokemon_data:
-    def __init__(self,species,type1,type2,baseHP,baseAttack,baseDefense,baseSpecialAttack,baseSpecialDefense,baseSpeed,experience_group,dex_info,dex_no):
+    def __init__(self,dex_no,species,type1,type2,baseHP,baseAttack,baseDefense,baseSpecialAttack,baseSpecialDefense,baseSpeed,experience_group,dex_info):
+        self.dex_no = dex_no
         self.species = species
         self.type1 = type1
         self.type2 = type2
@@ -56,7 +59,6 @@ class pokemon_data:
         self.baseSpeed = baseSpeed
         self.experience_group = experience_group
         self.dex_info = dex_info
-        self.dex_no = dex_no
 
     # Define how to print this class for users. Probably useless
     def __str__(self):
