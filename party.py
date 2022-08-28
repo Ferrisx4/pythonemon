@@ -31,7 +31,7 @@ def loadParty():
         temp_party = []
         # Load each party member
         for row in csv_reader:
-            temp_party.append(pokemon_instance(row["species"],row["level"],row["status"],[row["move1"],row["move2"],row["move3"],row["move4"]]))
+            temp_party.append(pokemon_instance(row["species"],row["nickname"],row["level"],row["status"],[row["move1"],row["move2"],row["move3"],row["move4"]]))
             imported_party_members += 1
 
         for x in range(imported_party_members+1, 7):
