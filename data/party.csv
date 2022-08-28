@@ -1,3 +1,4 @@
-species,level,status,move1,move2,move3,move4
-Bulbasaur,5,0,1,1,1,1
-Ivysaur,5,0,1,2,3,0
+species,nickname,level,status,move1,move2,move3,move4
+Bulbasaur,,5,0,1,1,1,1
+Ivysaur,Ivy,5,0,1,2,3,0
+Venusaur,,102,0,1,0,0,0
