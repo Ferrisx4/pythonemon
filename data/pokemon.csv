@@ -1,6 +1,9 @@
-species,type1,type2,base_hp,base_attack,base_defense,base_sa,base_sd,base_speed,experience_group,dex_info,dex_no
-Bulbasaur,Grass,NULL,45,49,49,65,65,45,normal,It's a weird plant turtle thing,1
-Ivysaur,Grass,NULL,40,40,40,40,40,40,normal,It's the bigger brother of the weird plant turtle thing,2
-Venusaur,Grass,Poison,50,50,50,50,50,50,normal,It's the oldest brother in this trio,3
-Squirtle,Water,NULL,30,30,30,30,30,30,normal,Turt turt,7
-Pikachu,Electric,NULL,35,35,35,35,35,35,normal,Pika chu!,25
+dex_no,species,type1,type2,base_hp,base_attack,base_defense,base_sa,base_sd,base_speed,experience_group,dex_info
+1,Bulbasaur,Grass,Poison,45,49,49,65,65,45,medium_slow,It's a weird plant turtle thing
+2,Ivysaur,Grass,Poison,60,62,63,80,80,60,medium_slow,It's the bigger brother of the weird plant turtle thing
+3,Venusaur,Grass,Poison,80,82,83,100,100,80,medium_slow,It's the oldest brother in this trio
+7,Squirtle,Water,NULL,44,48,65,50,64,43,medium_slow,Turt turt
+8,Wartortle,Water,None,59,63,80,65,80,58,medium_slow, Turt Turt Electric Bugaloo
+9,Blastoise,Water,None,79,83,100,85,105,78,medium_slow, TORT
+25,Pikachu,Electric,NULL,35,35,35,35,35,35,normal,Pika chu!
+26,Raichu,Electric,Null,36,36,36,36,36,36,normal,Pikachu's less cute older brother
